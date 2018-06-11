@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function(){
+    return "Primeira lógica com Laravel";
+});
+
+Route::get('/outra', function(){
+     return "Outra página com laravel";
 });
