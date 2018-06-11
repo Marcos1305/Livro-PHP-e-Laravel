@@ -8,14 +8,8 @@ class ProdutoController extends Controller
     public function lista()
     {
         $produtos = DB::select('select * from produtos');
-        $html = '<h1>Listagem de produtos com Laravel</h1>';
-        $html .= '<ul>';
-        foreach($produtos as $p){
-            $html .= '<li> Nome: '. $p->nome.', Descricão: '. $p->descricao . '</li>';
-        }
-        $html .= '</ul>';
-
-        return $html;
+        $data = ['produtos' => $produtos];
+        return view('listagem', $data);
     }
 }
 ?>
