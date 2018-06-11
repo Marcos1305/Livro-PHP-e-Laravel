@@ -15,4 +15,7 @@ Route::get('/', function(){
     return "Primeira lógica com Laravel";
 });
 
+Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra')->where('id', '[0-9]+');
+
+
 Route::get('/produtos', 'ProdutoController@lista');

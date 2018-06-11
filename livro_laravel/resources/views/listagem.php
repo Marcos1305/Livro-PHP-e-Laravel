@@ -16,6 +16,7 @@
                 <th>Preço</th>
                 <th>Descrição</th>
                 <th>Quantidade</th>
+                <th>Detalhes</th>
             </thead>
             <?php foreach($produtos as $p) : ?>
             <tr>
@@ -23,6 +24,11 @@
                 <td><?php echo $p->valor?></td>
                 <td><?php echo $p->descricao ?></td>
                 <td><?php echo $p->quantidade?></td>
+                <td>
+                    <a href="/produtos/mostra/<?php echo $p->id ?>">
+                        Visualizar
+                    </a>
+                </td>
             </tr>
             <?php endforeach; ?>
         </table>
