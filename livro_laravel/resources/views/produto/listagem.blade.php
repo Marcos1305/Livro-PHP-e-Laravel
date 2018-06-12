@@ -6,13 +6,14 @@
                 </div>
         @else
         <h1>Listagem de Produtos</h1>    
-        <table class="table table-striped table-bordered table-hover">
+        <table  class="table table-striped table-bordered table-hover">
             <thead>
                 <th>Produto</th>
                 <th>Preço</th>
                 <th>Descrição</th>
                 <th>Quantidade</th>
-                <th>Detalhes</th>
+                <th>Ações</th>
+
             </thead>
 
             @foreach($produtos as $p)
@@ -22,9 +23,24 @@
                 <td>{{$p->descricao}}</td>
                 <td>{{$p->quantidade}}</td>
                 <td> 
-                    <a href="/produtos/mostra/{{$p->id}}">
-                        Visualizar
+                    <button>
+                    <a href="{{action('ProdutoController@mostra', $p->id)}}">
+                        <i class="fas fa-eye"></i>
+                    Detalhes
                     </a>
+                    </button>
+                    <button>
+                    <a href="{{action('ProdutoController@edit', $p->id)}}">
+                        <i class="fas fa-trash"></i>
+                    Editar
+                    </a>
+                    </button>
+                    <button>
+                    <a href="{{action('ProdutoController@remove', $p->id)}}">
+                        <i class="fas fa-trash"></i>
+                    Remover
+                    </a>
+                    </button>
                 </td>
             </tr>
             @endforeach

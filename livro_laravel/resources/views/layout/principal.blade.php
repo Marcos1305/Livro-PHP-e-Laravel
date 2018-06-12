@@ -7,6 +7,7 @@
     <title>Controle de Estoque</title>
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
@@ -17,10 +18,10 @@
                         Estoque Larevel
                     </a>
                     <button class="btn btn-info">
-                        <a href="{{action('ProdutoController@lista')}}">Listagem</a>
+                        <a href="{{action('ProdutoController@lista')}}"><i class="fas fa-list-ul"></i> Listagem</a>
                     </button>
                     <button class="btn btn-success">
-                        <a href="{{action('ProdutoController@novo')}}">Novo Produto</a>
+                        <a href="{{action('ProdutoController@novo')}}"><i class="fas fa-plus-circle"></i> Novo Produto</a>
                     </button>
 
                 </div>

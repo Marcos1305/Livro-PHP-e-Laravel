@@ -1,8 +1,8 @@
 @extends('layout.principal')
     @section('conteudo')
 
-<h1>Novo Produto</h1>
-<form action="/produtos/adiciona/" method="POST">
+<h1>Editar Produto {{$p->nome}}</h1>
+<form action="/produtos/update" method="POST">
     <input type="hidden" name="_token" value="{{{csrf_token()}}}">
     <input type="hidden" name="id" value="{{isset($p->id) ? $p->id : ''}}">
     <div class="form-group">
@@ -11,7 +11,7 @@
     </div>
     <div class="form-group">
         <label for="descricao">Descrição</label>
-        <input type="text" class="form-control" name="descricao" values="{{isset($p->descricao) ? $p->descricao : ''}}" id="descricao">
+        <input type="text" class="form-control" name="descricao" value="{{isset($p->descricao) ? $p->descricao : ''}}" id="descricao">
     </div>
     <div class="form-group">
         <label for="valor">Valor</label>
