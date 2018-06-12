@@ -20,6 +20,7 @@
                     <button class="btn btn-info">
                         <a href="{{action('ProdutoController@lista')}}"><i class="fas fa-list-ul"></i> Listagem</a>
                     </button>
+
                     <button class="btn btn-success">
                         <a href="{{action('ProdutoController@novo')}}"><i class="fas fa-plus-circle"></i> Novo Produto</a>
                     </button>
