@@ -10,7 +10,7 @@ class ProdutoController extends Controller
     {
         $produtos = DB::select('select * from produtos');
         $data = ['produtos' => $produtos];
-        return view('listagem', $data);
+        return view('produto.listagem', $data);
     }
     public function mostra($id)
     {
@@ -19,7 +19,7 @@ class ProdutoController extends Controller
         if(empty($resposta)){
             return "Esse produto não existe";
         }
-        return view('detalhes')->with('p', $resposta[0]);
+        return view('produto.detalhes')->with('p', $resposta[0]);
     }
 }
 ?>
