@@ -15,7 +15,14 @@
                 <div class="navbar-header">
                     <a href="/produtos" class="navbar-brand">
                         Estoque Larevel
-                    </a>  
+                    </a>
+                    <button class="btn btn-info">
+                        <a href="/produtos">Listagem</a>
+                    </button>
+                    <button class="btn btn-success">
+                        <a href="/produtos/novo">Novo Produto</a>
+                    </button>
+
                 </div>
             </div>
         </nav>

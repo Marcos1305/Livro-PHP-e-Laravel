@@ -19,7 +19,7 @@
             <tr class={{$p->quantidade <= 1 ? 'bg-danger' : ''}}>
                 <td>{{$p->nome}}</td>
                 <td>{{$p->valor}}</td>
-                <td>{{$p->descricao}}></td>
+                <td>{{$p->descricao}}</td>
                 <td>{{$p->quantidade}}</td>
                 <td> 
                     <a href="/produtos/mostra/{{$p->id}}">
