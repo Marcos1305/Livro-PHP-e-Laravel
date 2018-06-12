@@ -31,7 +31,7 @@
                     </button>
                     <button>
                     <a href="{{action('ProdutoController@edit', $p->id)}}">
-                        <i class="fas fa-trash"></i>
+                        <i class="fas fa-edit"></i>
                     Editar
                     </a>
                     </button>
