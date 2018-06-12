@@ -17,10 +17,10 @@
                         Estoque Larevel
                     </a>
                     <button class="btn btn-info">
-                        <a href="/produtos">Listagem</a>
+                        <a href="{{action('ProdutoController@lista')}}">Listagem</a>
                     </button>
                     <button class="btn btn-success">
-                        <a href="/produtos/novo">Novo Produto</a>
+                        <a href="{{action('ProdutoController@novo')}}">Novo Produto</a>
                     </button>
 
                 </div>

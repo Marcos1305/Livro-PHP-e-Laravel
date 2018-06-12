@@ -41,7 +41,13 @@ class ProdutoController extends Controller
                 'quantidade' =>$quantidade
             ]
         );
-        return view('produto.adicionado')->with('nome', $nome);
+        return redirect('ProdutoController@lista')->withInput(Request::only('nome'));
+    }
+
+    public function listaJson()
+    {
+        $produtos = DB::select('select * from produtos');
+        return response()->download($produtos);
     }
 }
 ?>
